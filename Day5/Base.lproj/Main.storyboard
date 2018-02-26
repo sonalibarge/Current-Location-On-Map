@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Day5" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="W2V-ox-GXG">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="614"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Dlf-Tk-SBT"/>
+                                </connections>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yg6-4e-ZJf">
+                                <rect key="frame" x="16" y="622" width="343" height="33"/>
+                                <color key="backgroundColor" red="0.0" green="0.4423828125" blue="0.069146050347222224" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="Q84-r8-hdh"/>
+                                </constraints>
+                                <state key="normal" title="Find My Location">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="myLocationButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jj6-Wx-HRP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="W2V-ox-GXG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8Di-8i-DGy"/>
+                            <constraint firstItem="W2V-ox-GXG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="9gj-YV-Yxh"/>
+                            <constraint firstItem="W2V-ox-GXG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="G38-o3-WQu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yg6-4e-ZJf" secondAttribute="bottom" constant="12" id="Qjf-OK-nhX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yg6-4e-ZJf" secondAttribute="trailing" constant="16" id="SmR-vs-V9a"/>
+                            <constraint firstItem="yg6-4e-ZJf" firstAttribute="top" secondItem="W2V-ox-GXG" secondAttribute="bottom" constant="8" id="nrr-kx-thy"/>
+                            <constraint firstItem="yg6-4e-ZJf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="qt1-OX-uOF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="W2V-ox-GXG" id="zAg-GY-PKG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
